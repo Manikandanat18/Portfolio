@@ -1,0 +1,189 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>portfolio</title>
+  
+  <link rel="icon" href="https://img.icons8.com/?size=100&id=54256&format=png&color=000000">
+  <style>
+    body {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      height: 100vh;
+      margin: 0;
+      font-family: Arial, sans-serif;
+      background-color: #f0f0f0;
+    }
+
+    .profile-card {
+      width: 300px;
+      padding: 20px;
+      background-color: white;
+      border-radius: 10px;
+      box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+      text-align: center;
+      position: relative;
+      z-index: 1;
+      right: 110px;
+      box-shadow: 0 4px 8px 0 grey, 0 6px 20px 0 grey;
+
+    }
+
+    button {
+      border-radius: 8px;
+    }
+
+    button:hover {
+      cursor: pointer;
+      box-shadow: 0 1px 8px 0 grey, 0 1px 20px 0 grey;
+
+    }
+
+    .profile-image img {
+      width: 200px;
+      height: 200px;
+      border-radius: 50%;
+      object-fit: cover;
+      margin-bottom: 15px;
+      position: relative;
+      z-index: 2;
+      bottom: 190px;
+      left: 160px;
+    }
+
+    h2 {
+      font-size: 1.5em;
+      margin: 10px 0 5px;
+    }
+
+    .title {
+      color: #555;
+      font-size: 1em;
+      margin-bottom: 15px;
+    }
+
+    .description {
+      font-size: 0.9em;
+      color: #777;
+      margin-bottom: 20px;
+      padding: 0 10px;
+    }
+
+    .social-icons {
+      display: flex;
+      justify-content: center;
+      gap: 15px;
+    }
+
+    .social-icons a {
+      color: #333;
+      font-size: 1.2em;
+      text-decoration: none;
+      transition: color 0.3s ease;
+    }
+
+    a {
+      text-decoration: none;
+
+    }
+
+    .social-icons a:hover {
+      color: #007bff;
+    }
+
+    .soc:hover {
+      width: 50px;
+      height: 50px;
+    }
+
+    @media only screen and (max-width: 560px) {
+      .profile-card {
+        margin-left: 39PX;
+        width: 250px;
+        height: 400px;
+      }
+
+      .profile-image img {
+        width: 180px;
+        height: 180px;
+      }
+    }
+  </style>
+</head>
+
+<body style="font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;">
+
+  <!DOCTYPE html>
+  <html lang="en">
+
+  <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Profile Card</title>
+    <link rel="stylesheet" href="styles.css">
+  </head>
+
+  <body>
+    <div class="profile-image">
+      <img src="./image/myimg - Copy.jpg" alt="Profile Image">
+    </div>
+    <div class="profile-card">
+
+      <h2 style="margin-top: 100px;">Mani kandan</h2>
+      <span style="font-size:large;color: grey;" id="typing-animation"></span>
+
+      <script>
+
+        // Initialize the typing animation
+        const typingAnimationElement = document.getElementById('typing-animation');
+
+        // Create an array of typing text
+        const typingTexts = [
+          'Frontend devolper ',
+          'Java developer   ',
+        ];
+
+        // Create a function to display the typing animation for a given text
+        function playTypingAnimation(text) {
+          // Loop through each character and add it to the element
+          for (let i = 0; i < text.length; i++) {
+            setTimeout(() => {
+              typingAnimationElement.textContent += text[i];
+            }, i * 200); // Increase the delay to slow down the typing animation
+          }
+
+          // Once the animation is complete, reset the text and start over
+          setTimeout(() => {
+            typingAnimationElement.textContent = '';
+            playTypingAnimation(typingTexts[(typingTexts.indexOf(text) + 1) % typingTexts.length]);
+          }, text.length * 200);
+        }
+
+        // Start the typing animation loop
+        playTypingAnimation(typingTexts[0]);
+
+      </script>
+      <p class="description">
+        A highly motivated and detail-oriented Java Full-Stack Developer with a strong foundation in
+        Frontend(HTML,CSS,JAVASCRIPT,REACT) and Backend(JAVA,SPRING BOOT,SQL) </p>
+      <button style="background-color: black;"><a href="port.html" class="linkedin" style="color:white">More
+          Details</a></button>
+      <div class="social-icons" style="margin-top: 30px;">
+        <a href="https://github.com/Manikandanat18"> <img class="soc" src="./image/gitimg.png" width="45px"
+            height="45px"></a>
+        <a href="https://x.com/Manikan56884171"> <img class="soc" src="./image/twitter.png" width="45px"
+            height="45px"></a>
+        <a href="https://www.linkedin.com/in/mani-kandan-a97310251?"> <img class="soc" src="./image/linkedin.png"
+            width="45px" height="45px"></a>
+      </div>
+    </div>
+  </body>
+
+  </html>
+
+</body>
+
+</html>
